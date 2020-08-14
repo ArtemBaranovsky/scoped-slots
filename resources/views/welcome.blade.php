@@ -5,18 +5,41 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Laravel</title>
+{{--        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">--}}
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
     </head>
     <body>
         <div id="app">
-			<menu-list :items="['one', 'two', 'three']">
-                <template slot="menu-item" scope="props">
-                    <h2 v-text="props.item"></h2>
-                </template>
-            </menu-list>
+{{--            <div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true, "wrapAround": true }'>--}}
+{{--                <img src="http://placeimg.com/640/480/any">--}}
+{{--                <img src="http://placeimg.com/640/480/any?2">--}}
+{{--                <img src="http://placeimg.com/640/480/any?3">--}}
+{{--                <img src="http://placeimg.com/640/480/any?4">--}}
+{{--                <img src="http://placeimg.com/640/480/any?5">--}}
+{{--            </div>--}}
+
+            <carousel>
+                <img src="http://placeimg.com/640/480/any">
+                <img src="http://placeimg.com/640/480/any?2">
+                <img src="http://placeimg.com/640/480/any?3">
+                <img src="http://placeimg.com/640/480/any?4">
+                <img src="http://placeimg.com/640/480/any?5">
+            </carousel>
+
+            <h2>Another one</h2>
+
+            <div style="width: 300px; height: 150px;">
+                <carousel autoplay="true">
+                    <img style="height: 150px;" src="http://placeimg.com/640/480/any">
+                    <img style="height: 150px;" src="http://placeimg.com/640/480/any?2">
+                    <img style="height: 150px;" src="http://placeimg.com/640/480/any?3">
+                    <img style="height: 150px;" src="http://placeimg.com/640/480/any?4">
+                    <img style="height: 150px;" src="http://placeimg.com/640/480/any?5">
+                </carousel>
+            </div>
+
         </div>
-		<script src="/js/app.js"></script>
+{{--        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>--}}
+        <script src="/js/app.js"></script>
     </body>
 </html>
