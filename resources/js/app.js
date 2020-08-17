@@ -18,9 +18,11 @@ window.Vue = require('vue');
 
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
+// import './resources/tailwind.css';
 
 Vue.component('menu-list', require('./components/MenuList.vue').default);
 Vue.component('carousel', require('./components/Carousel.vue').default);
+Vue.component('testimonials', require('./components/Testimonials.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
