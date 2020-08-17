@@ -2072,8 +2072,14 @@ __webpack_require__.r(__webpack_exports__);
       this.timer = setTimeout(function () {
         console.log('Updating ' + testimonial.name);
         _this2.featuredTestimonial = testimonial;
-      }, 250);
+      }, 250); // this logic fires not earlier than after .25 sec.
     },
+
+    /*updateFeaturedTestimonial: _.throtte(function(){
+        console.log('I was Callleo');
+        this.featuredTestimonial = testimonial;
+    }, 2000 );*/
+    // this logic fires 2 sec after last main function ignition
     clearTimer: function clearTimer() {
       clearTimeout(this.timer);
     }

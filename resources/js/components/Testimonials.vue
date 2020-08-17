@@ -85,8 +85,12 @@
                 this.timer = setTimeout(()=>{
                     console.log('Updating ' + testimonial.name)
                     this.featuredTestimonial = testimonial;
-                },250)
+                },250)      // this logic fires not earlier than after .25 sec.
             },
+            /*updateFeaturedTestimonial: _.throtte(function(){
+                console.log('I was Callleo');
+                this.featuredTestimonial = testimonial;
+            }, 2000 );*/      // this logic fires 2 sec after last main function ignition
             clearTimer() {
                 clearTimeout(this.timer);
             }
