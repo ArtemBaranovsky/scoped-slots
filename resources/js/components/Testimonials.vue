@@ -57,9 +57,10 @@
 
 <script>
     import _ from 'lodash';
-
+    import SeriesDropdown from "./SeriesDropdown";
     export default {
         name: "Testimonials",
+        components: { SeriesDropdown },
         data() {
             return {
                 testimonials: [],
@@ -77,10 +78,10 @@
             );
         },
         methods: {
-/*            updateFeaturedTestimonial: _.debounce(function(testimonial) {
-               // console.log('Update the featured tesimonial to be ' + testimonial.name + '\'s');
-               this.featuredTestimonial = testimonial;
-            }, 300)*/       // to change only after long hover!!!
+            /*            updateFeaturedTestimonial: _.debounce(function(testimonial) {
+                           // console.log('Update the featured tesimonial to be ' + testimonial.name + '\'s');
+                           this.featuredTestimonial = testimonial;
+                        }, 300)*/       // to change only after long hover!!!
             updateFeaturedTestimonial(testimonial) {
                 this.timer = setTimeout(()=>{
                     console.log('Updating ' + testimonial.name)

@@ -23,6 +23,10 @@ window.Vue = require('vue');
 Vue.component('menu-list', require('./components/MenuList.vue').default);
 Vue.component('carousel', require('./components/Carousel.vue').default);
 Vue.component('testimonials', require('./components/Testimonials.vue').default);
+Vue.component('series-dropdown', require('./components/SeriesDropdown.vue').default);
+
+import PortalVue from 'portal-vue'
+Vue.use(PortalVue)
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

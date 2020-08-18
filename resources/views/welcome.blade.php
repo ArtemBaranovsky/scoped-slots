@@ -10,7 +10,8 @@
     </head>
     <body>
         <div id="app">
-{{--            <div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true, "wrapAround": true }'>--}}
+            @include ('layouts.nav.index')
+            {{--            <div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true, "wrapAround": true }'>--}}
 {{--                <img src="http://placeimg.com/640/480/any">--}}
 {{--                <img src="http://placeimg.com/640/480/any?2">--}}
 {{--                <img src="http://placeimg.com/640/480/any?3">--}}

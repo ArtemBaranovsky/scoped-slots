@@ -11,6 +11,7 @@
 </head>
 <body>
 <div id="app">
+    @include ('layouts.nav.index')
     <testimonials></testimonials>
 </div>
 <script src="/js/app.js"></script>
