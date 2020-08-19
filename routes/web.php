@@ -33,8 +33,16 @@ Route::get('/discuss/channels/general-discussion/laravel-53-wish-list', function
     ]);
 });
 
+Route::post('/contact', function () {
+    return [ 'message' => 'success'];
+});
+
 Route::get('/testimonials', function () {
     return view('testimonials');
+});
+
+Route::get('/support', function () {
+    return view('support');
 });
 
 Route::get('api/series', function () {

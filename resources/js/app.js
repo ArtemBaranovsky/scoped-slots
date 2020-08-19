@@ -23,11 +23,15 @@ window.Vue = require('vue');
 Vue.component('menu-list', require('./components/MenuList.vue').default);
 Vue.component('carousel', require('./components/Carousel.vue').default);
 Vue.component('testimonials', require('./components/Testimonials.vue').default);
-Vue.component('reply-likes', require('./components/ReplyLikes.vue').default);
+// Vue.component('reply-likes', require('./components/ReplyLikes.vue').default);
 Vue.component('series-dropdown', require('./components/SeriesDropdown.vue').default);
+Vue.component('support-button', require('./components/SupportButton.vue').default);
 
 import PortalVue from 'portal-vue'
 Vue.use(PortalVue)
+
+import VModal from 'vue-js-modal'
+Vue.use(VModal)
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

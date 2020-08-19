@@ -3,10 +3,10 @@
         <span class="text-grey-dark text-xs" v-if="hasLikes">
         <strong v-if="isLikedByCurrentUser" class="text-grey-dark">You</strong>
         <template v-if="hasLikesByOthers">
-            {{ isLikedByCurrentUser ? 'and' : " }}
+            {{ isLikedByCurrentUser ? 'and' : '' }}
             <template v-for="(username, index) in likesExceptCurrentUser.slice(0, take)">
                 <a
-                : href=" '/@' +username" class="font-bold text-grey-dark" v-text="username.toUpperCase()">
+                :href=" '/@' +username" class="font-bold text-grey-dark" v-text="username.toUpperCase()">
                 </a>{{ (index !== likesExceptCurrentUser.slice(0, take).length - 1) ? ', ' : '' }}
             </template>
             <template v-if="likesExceptCurrentUser.length > take">
@@ -17,7 +17,8 @@
         {{ isLikedByCurrentUser ? 'like' : 'liked' }} this
         </span>
 
-        <portal :to="`meta-links-${replyId}`">
+<!--        <portal :to="`meta-links-${replyId}`">-->
+        <portal :to="meta-links">
             <a
                 class="text-grey-dark text-xs font-bold mr-4"
                 @click="toggleLike"
@@ -57,7 +58,7 @@
                 return this.likes.filter(user => user !== this.currentUser);
             },
             isLikedByCurrentUser() {
-                return this.likes.includes(this.currentuser);
+                return this.likes.includes(this.currentUser);
             }
         },
 
@@ -65,7 +66,7 @@
             toggleLike() {
                 axios.post(this.endpoint);
                 if (!this.isLikedByCurrentUser) {
-                    return this.usernames.push(this.currentuser);
+                    return this.usernames.push(this.currentUser);
                 }
 
                 this.usernames = this.likesExceptCurrentUser;
