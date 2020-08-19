@@ -26,6 +26,8 @@ Vue.component('testimonials', require('./components/Testimonials.vue').default);
 // Vue.component('reply-likes', require('./components/ReplyLikes.vue').default);
 Vue.component('series-dropdown', require('./components/SeriesDropdown.vue').default);
 Vue.component('support-button', require('./components/SupportButton.vue').default);
+Vue.component('accordion', require('./components/Accordion.vue').default);
+Vue.component('question', require('./components/Question.vue').default);
 
 import PortalVue from 'portal-vue'
 Vue.use(PortalVue)

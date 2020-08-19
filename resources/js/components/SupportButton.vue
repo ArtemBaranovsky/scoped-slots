@@ -132,11 +132,11 @@
                         this.$modal.hide('contact-support-modal');
                         this.resetForm();
                         swal('Thanks! we will be in touch soon.');
-                    });
+                    })
                     .catch(errors => {
                         // console.log(errors.response.data.errors);
                         this.errors = errors.response.data.errors
-                    })
+                    });
 
             },
             resetForm() {

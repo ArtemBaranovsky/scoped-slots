@@ -17,6 +17,19 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/faq', function () {
+    return view('faq', [
+        'questions' => [
+            ['question' => '1-st question', 'answer' => '1-st answer'],
+            ['question' => '2-nd question', 'answer' => '2-nd answer']
+//            trim(json_encode([
+//            json_encode(['question' => '1-st question', 'answer' => '1-st answer']),
+//            json_encode(['question' => '2-nd question', 'answer' => '2-nd answer'])
+//        ], JSON_UNESCAPED_SLASHES | JSON_FORCE_OBJECT | JSON_PARTIAL_OUTPUT_ON_ERROR), '{}')
+        ]
+    ]);
+});
+
 Route::get('/discuss/channels/general-discussion/laravel-53-wish-list', function () {
 //    return view('discuss/reply', [
 //        'reply' =>  {
