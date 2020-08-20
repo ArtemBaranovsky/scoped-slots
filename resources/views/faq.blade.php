@@ -12,13 +12,14 @@
                     It's okay. From time to time, we all have questions.
                 </p>
                 </header>
-            @foreach ($questions as $question)
-
-
-                        <accordion title="{{ $question['question'] }}" body="{{ $question['answer'] }}"></accordion>
+{{--                {{ die(var_dump($questions)) }}--}}
+{{--            @foreach ($questions as $question)--}}
+{{--                                    {{ die(var_dump(json_encode($questions))) }}--}}
+                    <accordion :items="{{ json_encode($questions, JSON_UNESCAPED_SLASHES ) }}"></accordion>
+{{--                        <accordion title="{{ $question['question'] }}" body="{{ $question['answer'] }}"></accordion>--}}
 {{--                    <accordion title="{{ $question->question }}" body="{{ $question->answer }}"></accordion>--}}
 {{--                    <question :question="{{ json_encode($question) }}"></question>--}}
-                @endforeach
+{{--                @endforeach--}}
             </div>
         </div>
     </section>

@@ -19,14 +19,23 @@ Route::get('/', function () {
 
 Route::get('/faq', function () {
     return view('faq', [
-        'questions' => [
-            ['question' => '1-st question', 'answer' => '1-st answer'],
-            ['question' => '2-nd question', 'answer' => '2-nd answer']
-//            trim(json_encode([
-//            json_encode(['question' => '1-st question', 'answer' => '1-st answer']),
-//            json_encode(['question' => '2-nd question', 'answer' => '2-nd answer'])
-//        ], JSON_UNESCAPED_SLASHES | JSON_FORCE_OBJECT | JSON_PARTIAL_OUTPUT_ON_ERROR), '{}')
-        ]
+//        'questions' => [
+//            ['question' => '1-st question', 'answer' => '1-st answer'],
+//            ['question' => '2-nd question', 'answer' => '2-nd answer']
+//        ]
+        'questions' =>
+//            trim(
+//                json_encode([
+//                    'questions' => [
+                    [
+                            ['question' => '1-st question', 'answer' => '1-st answer'],
+                            ['question' => '2-nd question', 'answer' => '2-nd answer']
+                    ]
+//                    ]
+//            ], /*true*/ JSON_UNESCAPED_SLASHES | JSON_FORCE_OBJECT | JSON_PARTIAL_OUTPUT_ON_ERROR)
+//            , '{"}"')."\"}"
+//            , '"')
+
     ]);
 });
 
