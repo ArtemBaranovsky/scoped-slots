@@ -29,7 +29,16 @@ Route::get('/faq', function () {
 //                    'questions' => [
                     [
                             ['question' => '1-st question', 'answer' => '1-st answer'],
-                            ['question' => '2-nd question', 'answer' => '2-nd answer']
+                            ['question' => '2-nd question', 'answer' => '2-nd answer'],
+                            ['question' => '3-rd question', 'answer' => '3-rd answer'],
+                            ['question' => '4-th question', 'answer' => '4-th answer'],
+                            ['question' => '5-th question', 'answer' => '5-th answer'],
+                            ['question' => '6-th question', 'answer' => '6-th answer'],
+                            ['question' => '7-th question', 'answer' => '7-th answer'],
+                            ['question' => '8-th question', 'answer' => '8-th answer'],
+                            ['question' => '9-th question', 'answer' => '9-th answer'],
+                            ['question' => '10-th question', 'answer' => '10-th answer'],
+                            ['question' => '11-th question', 'answer' => '11-th answer'],
                     ]
 //                    ]
 //            ], /*true*/ JSON_UNESCAPED_SLASHES | JSON_FORCE_OBJECT | JSON_PARTIAL_OUTPUT_ON_ERROR)

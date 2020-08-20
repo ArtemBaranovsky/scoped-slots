@@ -15,6 +15,13 @@
 .is-circle {
     border-radius: 50%;
 }
+.is-fixed-to-top {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
 @tailwind utilities;
 
 
