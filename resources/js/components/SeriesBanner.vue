@@ -1,5 +1,5 @@
 <template>
-    <div ref="series-banner-meta" class="series-banner-meta hidden md:block bg-grey py-2">
+    <div ref="series-banner-meta" class="series-banner-meta hidden md:block bg-red py-2">
         <div class="container">
             <ul class="level color-text-lighter text-xs">
 <!--                LEFT SIDE-->
