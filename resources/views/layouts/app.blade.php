@@ -11,8 +11,8 @@
 <body>
     <div id="app">
         @include ('layouts.nav.index')
-{{--        @include ('series.banner-meta')--}}
-        <series-banner></series-banner>
+        @include ('series.banner-meta')
+{{--        <pinned></pinned>--}}
         <main class="container mx-auto py-4">
             @yield('content')
         </main>

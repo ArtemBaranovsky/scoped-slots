@@ -28,7 +28,7 @@ Vue.component('series-dropdown', require('./components/SeriesDropdown.vue').defa
 Vue.component('support-button', require('./components/SupportButton.vue').default);
 Vue.component('accordion', require('./components/Accordion.vue').default);
 Vue.component('question', require('./components/Question.vue').default);
-Vue.component('series-banner', require('./components/SeriesBanner.vue').default);
+Vue.component('pinned', require('./components/Pinned.vue').default);
 
 import PortalVue from 'portal-vue'
 Vue.use(PortalVue)
