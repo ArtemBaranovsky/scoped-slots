@@ -1,46 +1,48 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.app')
+{{--@section('meta-title', 'Laracasts Frequently Asked Questions')--}}
+{{--@section('meta-description', 'Laracasts frequently asked questions.')--}}
 
-        <title>Laravel</title>
-{{--        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">--}}
+@section('styles')
+    <style>
+        html, body { height: 100vh; }
+        body {
+            display: flex; align-items: center; justify-content: center;
+        }
+        .tooltip {
+            background: black; color: white; padding: 10px; border-radius: 15px; opacity: unset;
+        }
+    </style>
+@stop
 
-    </head>
-    <body>
-        <div id="app">
-            @include ('layouts.nav.index')
-            {{--            <div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true, "wrapAround": true }'>--}}
-{{--                <img src="http://placeimg.com/640/480/any">--}}
-{{--                <img src="http://placeimg.com/640/480/any?2">--}}
-{{--                <img src="http://placeimg.com/640/480/any?3">--}}
-{{--                <img src="http://placeimg.com/640/480/any?4">--}}
-{{--                <img src="http://placeimg.com/640/480/any?5">--}}
-{{--            </div>--}}
 
-            <carousel>
-                <img src="http://placeimg.com/640/480/any">
-                <img src="http://placeimg.com/640/480/any?2">
-                <img src="http://placeimg.com/640/480/any?3">
-                <img src="http://placeimg.com/640/480/any?4">
-                <img src="http://placeimg.com/640/480/any?5">
-            </carousel>
+@section('content')
+    <section class="is-small is-normal">
+        <h3>Option #1</h3>
+        <p>
+            Hello there, <span data-tooltip="I am a tooltip" data-tooltip-placement="right">hover over me</span>
+        </p>
+        <p>
+            Hello there again, <span data-tooltip="So we meet again" data-tooltip-placement="bottom">hover over me again</span>
+        </p>
 
-            <h2>Another one</h2>
+        <hr>
+        <h3>Option #2</h3>
+        <p>
+            Hello there, <span v-tooltip:top="'Here is another way to make a tooltip'">hover over me</span>
+        </p>
 
-            <div style="width: 300px; height: 150px;">
-                <carousel autoplay="true">
-                    <img style="height: 150px;" src="http://placeimg.com/640/480/any">
-                    <img style="height: 150px;" src="http://placeimg.com/640/480/any?2">
-                    <img style="height: 150px;" src="http://placeimg.com/640/480/any?3">
-                    <img style="height: 150px;" src="http://placeimg.com/640/480/any?4">
-                    <img style="height: 150px;" src="http://placeimg.com/640/480/any?5">
-                </carousel>
+        <hr>
+        <h3>Option #3</h3>
+        <p>
+            Hello there, <span data-tooltip-name="our-products-tooltip">Learn about our products</span>
+        </p>
+        <tooltip name="our-products-tooltip" placement="left" offset="0, 20">
+            <div class="p-4 w-64">
+                <h1 class="mb-4">Our products</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aut commodi cumque enim et eum
+                    expedita facilis, fugiat maiores minima nam neque officiis omnis porro quibusdam quis tempore, vel
+                    vero.</p>
             </div>
-
-        </div>
-{{--        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>--}}
-        <script src="/js/app.js"></script>
-    </body>
-</html>
+        </tooltip>
+    </section>
+@stop

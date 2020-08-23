@@ -20,6 +20,9 @@ window.Vue = require('vue');
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 // import './resources/tailwind.css';
 
+
+
+
 Vue.component('menu-list', require('./components/MenuList.vue').default);
 Vue.component('carousel', require('./components/Carousel.vue').default);
 Vue.component('testimonials', require('./components/Testimonials.vue').default);
@@ -28,6 +31,7 @@ Vue.component('series-dropdown', require('./components/SeriesDropdown.vue').defa
 Vue.component('support-button', require('./components/SupportButton.vue').default);
 Vue.component('accordion', require('./components/Accordion.vue').default);
 Vue.component('question', require('./components/Question.vue').default);
+
 Vue.component('pinned', require('./components/Pinned.vue').default);
 
 import PortalVue from 'portal-vue'
@@ -42,6 +46,39 @@ Vue.use(VModal)
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+// 1. Using data attributes
+// import Tooltip from 'tooltip.js';
+import PopperTooltip from 'tooltip.js';
+
+// 2. Using dedicated vue directive
+// import Tooltip from 'tooltip.js';
+Vue.directive('tooltip', {
+    bind(elem, bindings) {
+        // console.log(bindings);
+        // new Tooltip(elem, {
+        new PopperTooltip(elem, {
+            placement: bindings.arg,
+            title: bindings.value,
+        })
+    }
+});
+
+// 3. Using dedicated Vue components
+import Tooltip from './components/Tooltip';
+Vue.component('tooltip', Tooltip);
+
 const app = new Vue({
     el: '#app',
+    mounted() {   // 1. First option -tooltip with data-attributes
+        document.querySelectorAll('[data-tooltip]').forEach(elem => {
+            console.log(elem.dataset);
+            new PopperTooltip(elem, {
+            // new PopperTooltip(elem, {
+                // placement: 'top',
+                placement: elem.dataset.tooltipPlacement || 'top',
+                // title: 'Hardcode the tooltip',
+                title: elem.dataset.tooltip,
+            })
+        })
+    }
 });

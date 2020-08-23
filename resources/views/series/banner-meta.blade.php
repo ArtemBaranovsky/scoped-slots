@@ -8,10 +8,9 @@
                         <p class="in-caps">
                             <a href="/series?curated" class="inherits-color is-vertically-centered">
                                 <span class=Narrow'*>&#8592;</span>
-                                <strong>Back to Maln</strong>
+                                <strong>Back to Main</strong>
                             </a>
-                        </p>
-                    </div>
+                        </p>                    </div>
                     <div class="level-item">
                         <span class="in-caps is-bold color-primary">
                         Updated {{--{{ $series->updated_at->diffForHumans() }}--}}
