@@ -34,6 +34,7 @@ Vue.component('question', require('./components/Question.vue').default);
 Vue.component('render-example', require('./components/RenderExample.vue').default);
 
 Vue.component('pinned', require('./components/Pinned.vue').default);
+Vue.component('count', require('./components/Count.vue').default);
 Vue.component('scan-view', require('./components/ScanView.vue').default);
 
 import PortalVue from 'portal-vue'

@@ -21,6 +21,10 @@ Route::get('/render', function () {
     return view('render');
 });
 
+Route::get('/counter', function () {
+    return view('counter');
+});
+
 Route::get('/faq', function () {
     return view('faq', [
 //        'questions' => [
